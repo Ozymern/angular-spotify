@@ -1,0 +1,20 @@
+<div class="row">
+
+    <div class="col">
+       <div class="form-group">
+         <label for=""></label>
+         <input  #textSearch (keyup)="search(textSearch.value)" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Buscar artista">
+       </div>
+    </div>
+</div>
+<!-- <div class="card-columns m-3">
+        <div class="card" *ngFor="let artist of artists">
+            <img [src]="artist.images | noimage" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{artist.name}}</h5>
+        
+            </div>
+        </div>
+    </div> --> 
+    <app-loading *ngIf="loading" class="mt-5"></app-loading>
+<app-card  *ngIf="!loading" [items]="artists"></app-card>
